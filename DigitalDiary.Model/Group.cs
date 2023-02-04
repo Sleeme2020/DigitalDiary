@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace DigitalDiary.Model
 {
-    public abstract class Human
+    public class Group
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
-        public DateTime BirthDay { get; set; }
-        public User User { get; set; }
+        public List<Student> Students { get; set; }
 
     }
 }

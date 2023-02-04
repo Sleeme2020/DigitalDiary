@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace DigitalDiary.Model
 {
-    public class User
+    public class Mark
     {
         public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public List<Human> Humans { get; set; }
-
+        public int Val { get; set; }
+        public Work Work { get; set; }
+        public Student Student { get; set; }   
+        public Teacher Teacher { get; set; }
     }
 }
