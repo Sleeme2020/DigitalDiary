@@ -14,5 +14,14 @@ namespace DigitalDiary.Model
         public string Email { get; set; }
         public List<Human> Humans { get; set; }
 
+        public void UpdateEnty(User user)
+        {
+            if (user != null) {
+
+                Password= user.Password;
+                Email= user.Email;            
+            }
+        }
+
     }
 }

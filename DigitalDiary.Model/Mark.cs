@@ -11,6 +11,7 @@ namespace DigitalDiary.Model
         public int Id { get; set; }
         public int Val { get; set; }
         public Work Work { get; set; }
+        public int WorkId { get; set; }
         public Student Student { get; set; }   
         public Teacher Teacher { get; set; }
     }

@@ -8,9 +8,11 @@ namespace DigitalDiary.Model
 {
     public class ClassWork:Work
     {
+        public PairWork PairWork { get; set; }
+        public int PairWorkId { get; set; }
         public string Name { get; set; }
         public bool IsCompleted { get; set; }        
-        public HomeWork HomeWork { get; set; }
+        public List<HomeWork> HomeWorks { get; set; }
         public List<Mark> Marks { get; set; }
         public List<Presence> Presences { get; set; }
     }

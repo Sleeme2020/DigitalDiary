@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DigitalDiary.App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="349" Width="580">
     <Window.Resources>
-        
+
     </Window.Resources>
     <Grid>
-        
+        <TextBox  Text="{Binding Login}" HorizontalAlignment="Left" Margin="170,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="35,75,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox Text="{Binding Password}" HorizontalAlignment="Left" Margin="170,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="35,125,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Button Content="Вход" HorizontalAlignment="Left" Margin="86,246,0,0" VerticalAlignment="Top" Height="39" Width="130"/>
+        <Button Content="Регистрация" HorizontalAlignment="Left" Margin="386,246,0,0" VerticalAlignment="Top" Height="39" Width="130"/>
+
     </Grid>
 </Window>

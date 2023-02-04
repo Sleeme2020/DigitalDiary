@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalDiary.App.VM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace DigitalDiary.App
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }

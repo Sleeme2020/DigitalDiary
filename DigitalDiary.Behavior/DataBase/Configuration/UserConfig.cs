@@ -13,7 +13,13 @@ namespace DigitalDiary.Behavior.DataBase.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+            builder.Property(x=>x.Id).ValueGeneratedOnAdd();
+            builder.HasMany(u => u.Humans)
+                .WithOne(u => u.User)
+                .HasForeignKey(u => u.UserId);
+            builder.HasIndex(u=>u.Login).IsUnique();
+            builder.HasIndex(u => u.Email);
         }
     }
 }

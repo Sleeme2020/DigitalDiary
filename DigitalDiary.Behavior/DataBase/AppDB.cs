@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DigitalDiary.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +12,19 @@ namespace DigitalDiary.Behavior.DataBase
 {
     public class AppDB : DbContext
     {
-        //public DbSet<Castomer> Castomers { get; set; }
-        //public DbSet<CountGoods> CountGoods { get; set; }
-        //public DbSet<Goods> Goods { get; set; }
-        //public DbSet<Manager> Managers { get; set; }
-        //public DbSet<PriceGoods> PriceGoods { get; set; }
-        //public DbSet<Sale> Sales { get; set; }
-        //public DbSet<Sale_Goods> Sale_Goods { get; set; }
-        //public DbSet<TypeGoods> TypeGoods { get; set; }
+        
+        public DbSet<ClassWork> ClassWorks { get; set; }
+        public DbSet<Group>  Groups{ get; set; }
+        public DbSet<HomeWork> HomeWorks  { get; set; }
+        public DbSet<Mark> Marks { get; set; }
+        public DbSet<PairWork>  PairWorks{ get; set; }
+        public DbSet<Parent> Parents { get; set; }
+        public DbSet<Presence> Presences { get; set; }
+        public DbSet<Student> Students  { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Teacher> Teachers{ get; set; }
+        public DbSet<User> Users{ get; set; }
+
 
 
 
@@ -26,8 +33,8 @@ namespace DigitalDiary.Behavior.DataBase
         //public DbSet<TypeGoods> Goods { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
