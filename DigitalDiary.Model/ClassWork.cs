@@ -13,7 +13,6 @@ namespace DigitalDiary.Model
         public string Name { get; set; }
         public bool IsCompleted { get; set; }        
         public List<HomeWork> HomeWorks { get; set; }
-        public List<Mark> Marks { get; set; }
         public List<Presence> Presences { get; set; }
     }
 }

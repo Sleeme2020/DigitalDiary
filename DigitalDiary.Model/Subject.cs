@@ -8,5 +8,6 @@ namespace DigitalDiary.Model
 {
     public class Subject
     {
+        public int Id { get; set; }
     }
 }

@@ -19,6 +19,6 @@ namespace DigitalDiary.Model
 
         #endregion
         public DateTime DateEnd { get; set; }
-        public List<Mark> Marks { get; set; }
+        
     }
 }

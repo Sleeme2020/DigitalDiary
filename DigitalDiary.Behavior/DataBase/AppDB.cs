@@ -24,11 +24,11 @@ namespace DigitalDiary.Behavior.DataBase
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Teacher> Teachers{ get; set; }
         public DbSet<User> Users{ get; set; }
+        public DbSet<Work> Work{ get; set; }
 
 
 
-
-        public AppDB() => Database.Migrate();
+        public AppDB() => Database.EnsureCreated();
 
         //public DbSet<TypeGoods> Goods { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

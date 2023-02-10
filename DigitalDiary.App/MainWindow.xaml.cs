@@ -1,4 +1,5 @@
 ﻿using DigitalDiary.App.VM;
+using DigitalDiary.Behavior.DataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace DigitalDiary.App
         {
             InitializeComponent();
             DataContext = new MainViewModel();
+            AppDB  appDB = new AppDB();
         }
     }
 }

@@ -13,15 +13,18 @@ namespace DigitalDiary.Behavior.DataBase.Configuration
     {
         public void Configure(EntityTypeBuilder<ClassWork> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.Property(x=>x.Id).ValueGeneratedOnAdd();
+            
             builder.HasIndex(u=>new {u.SubjectId,u.GroupId,u.TeacherId,u.Date,u.PairWorkId}).IsUnique();
             builder.HasMany(u => u.HomeWorks)
                  .WithOne(u => u.ClassWork)
                  .HasForeignKey(u => u.ClassWorkId);
-            builder.UseTpcMappingStrategy();
+           
+            
+                
+            
             //builder.ToTable("ClassWork",u=>u.Property(u=>u.Marks)).OwnsMany(u=>u.Marks)
             //    .(u=>u.Work);
+            
         }
     }
 }

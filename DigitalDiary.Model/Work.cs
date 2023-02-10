@@ -16,5 +16,6 @@ namespace DigitalDiary.Model
         public int TeacherId { get; set; }
         public Group Group { get; set; }
         public int GroupId { get; set; }
+        public List<Mark> Marks { get; set; }
     }
 }
