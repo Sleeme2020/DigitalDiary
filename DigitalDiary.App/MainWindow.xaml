@@ -14,8 +14,8 @@
         <Label Content="Логин" HorizontalAlignment="Left" Margin="35,75,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <TextBox Text="{Binding Password}" HorizontalAlignment="Left" Margin="170,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" FontSize="16" FontWeight="Bold"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="35,125,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-        <Button Content="Вход" HorizontalAlignment="Left" Margin="86,246,0,0" VerticalAlignment="Top" Height="39" Width="130"/>
-        <Button Content="Регистрация" HorizontalAlignment="Left" Margin="386,246,0,0" VerticalAlignment="Top" Height="39" Width="130"/>
+        <Button Command="{Binding Auth}" Content="Вход" HorizontalAlignment="Left" Margin="86,246,0,0" VerticalAlignment="Top" Height="39" Width="130"/>
+        <Button Click="Button_Click" Content="Регистрация" HorizontalAlignment="Left" Margin="386,246,0,0" VerticalAlignment="Top" Height="39" Width="130"/>
 
     </Grid>
 </Window>

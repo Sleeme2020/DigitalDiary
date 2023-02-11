@@ -25,6 +25,11 @@ namespace DigitalDiary.Behavior
             using (AppDB appDB = new AppDB())
                 return appDB.Users.FirstOrDefault(u => u.Id == Id);
         }
+        public static User Get(string login)
+        {
+            using (AppDB appDB = new AppDB())
+                return appDB.Users.FirstOrDefault(u => u.Login == login);
+        }
 
         public static User GetAuth(string login , string password)
         {

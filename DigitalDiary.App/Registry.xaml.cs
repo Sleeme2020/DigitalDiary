@@ -1,5 +1,4 @@
 ﻿using DigitalDiary.App.VM;
-using DigitalDiary.Behavior.DataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,28 +11,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DigitalDiary.App
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Registry.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Registry : Window
     {
-        public MainWindow()
-        {           
-            
+        public Registry()
+        {
             InitializeComponent();
-            DataContext = new MainViewModel(this);
-            
+            DataContext = new RegistryViewModel(this);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Registry registry = new Registry();
-            registry.ShowDialog();
+            Close();
         }
     }
 }
