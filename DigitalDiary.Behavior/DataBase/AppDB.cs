@@ -28,7 +28,7 @@ namespace DigitalDiary.Behavior.DataBase
 
 
 
-        public AppDB() => Database.EnsureCreated();
+        public AppDB() => Database.Migrate();
 
         //public DbSet<TypeGoods> Goods { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

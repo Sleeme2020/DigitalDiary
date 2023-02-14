@@ -8,12 +8,19 @@ using System.Threading.Tasks;
 
 namespace DigitalDiary.Model
 {
+    public enum TypeUser
+    {
+        Student,
+        Teacher,
+        Parent
+    }
     public class User
     {
         public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public TypeUser TypeUser { get; set; }
         public List<Human> Humans { get; set; }
 
         public static bool operator true (User user)

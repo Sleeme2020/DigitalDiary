@@ -9,6 +9,7 @@ namespace DigitalDiary.Model
     abstract public class Work
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public DateTime Date { get; set; }
         public Subject Subject { get; set; }
         public int SubjectId { get; set; }

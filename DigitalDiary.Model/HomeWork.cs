@@ -8,6 +8,7 @@ namespace DigitalDiary.Model
 {
     public class HomeWork:Work
     {
+        public string About { get; set; }
         public ClassWork ClassWork { get; set; }
         public int ClassWorkId { get; set; }
         #region RefClassWork
