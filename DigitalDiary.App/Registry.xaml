@@ -42,6 +42,10 @@
                     <TextBox Width="200" Text="{Binding User.Email}" />
                 </StackPanel >
                 <StackPanel Style="{StaticResource ResourceKey=GridStyle}">
+                    <Label Content="Выбрать тип пользователя"/>
+                    <ComboBox ItemsSource="{Binding UserTypes}" SelectedItem="{Binding User.TypeUser}" Width="152" />
+                </StackPanel>
+                <StackPanel Style="{StaticResource ResourceKey=GridStyle}">
                     <Button Height="30" Width="200" Content="Зарегистрироваться" Command="{Binding Reg}"/>
                 </StackPanel>
             </StackPanel>
